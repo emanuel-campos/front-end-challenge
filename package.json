@@ -1,0 +1,19 @@
+{
+  "name": "front-end-challenge",
+  "version": "1.0.0",
+  "description": "Landing page construída com React",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emanuel-campos/front-end-challenge.git"
+  },
+  "author": "Emanuel Campos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emanuel-campos/front-end-challenge/issues"
+  },
+  "homepage": "https://github.com/emanuel-campos/front-end-challenge#readme"
+}
