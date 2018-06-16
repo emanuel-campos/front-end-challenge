@@ -1,2 +1,5 @@
 # diretorio com as dependencias
 node_modules/
+
+# build da aplicacao
+dist/
