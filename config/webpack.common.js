@@ -23,7 +23,13 @@ module.exports = {
         use: [
           { loader: 'style-loader' },
           { loader: 'css-loader' },
-          { loader: 'sass-loader' }
+          { loader: 'sass-loader' },
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: './src/assets/stylesheets/variables.scss'
+            }
+          }
         ]
       },
       {
