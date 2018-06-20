@@ -19,6 +19,16 @@ module.exports = {
         use: [{ loader: 'babel-loader' }]
       },
       {
+        test: /\.js$/,
+        loader: "eslint-loader",
+        enforce: 'pre',
+        include: [path.resolve('./src')],
+        options: {
+          formatter: require('eslint-friendly-formatter'),
+          emitWarning: true
+        }
+      },
+      {
         test: /\.s(a|c)ss$/,
         use: [
           { loader: 'style-loader' },
