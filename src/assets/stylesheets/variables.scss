@@ -3,7 +3,7 @@ $color-primary-base:        #04669c;
 $color-primary-dark:        darken($color-primary-base, 12%);
 $color-primary-light:       lighten($color-primary-base, 15%);
 
-$color-secondary-base:      #00AB54;
+$color-secondary-base:      #00ab54;
 $color-secondary-dark:      darken($color-secondary-base, 12%);
 $color-secondary-light:     lighten($color-secondary-base, 15%);
 
@@ -14,27 +14,27 @@ $color-gray:                #c6c6c6;
 $color-gray-light:          #eaeaea;
 $color-gray-lighter:        #f4f4f4;
 $color-bluish-gray:         #273341;
-$color-white:               #fff;
+$color-white:               #ffffff;
 $color-black:               #1c1c1c;
 $color-darkness:            #141518;
 
 $color-success:             #2d9c5d;
 $color-info:                #5bc0de;
-$color-warning:             #FFA628;
+$color-warning:             #ffa628;
 $color-danger:              #d9534f;
 
-$color-flickr:              #FF0084;
-$color-github:              #000;
+$color-flickr:              #ff0084;
+$color-github:              #000000;
 $color-linkedin:            #007bb6;
 $color-pinterest:           #cb2027;
 $color-skype:               #00aff0;
-$color-behance:             #000;
+$color-behance:             #000000;
 $color-facebook:            #3c599f;
 $color-foursquare:          #1cafec;
 $color-google:              #cf1717;
 $color-instagram:           #2a5b83;
 $color-lastfm:              #d21309;
-$color-steam:               #000;
+$color-steam:               #000000;
 $color-vine:                #00a478;
 $color-wordpress:           #21759a;
 $color-yahoo:               #572c73;
@@ -119,16 +119,19 @@ $time-delay:                0.05s;
 $time-duration:             0.25s;
 
 @function double($value) {
-  @return $value * 2
-};
+
+  @return $value * 2;
+}
 
 @function triple($value) {
+
   @return $value * 3;
-};
+}
 
 @function half($value) {
-  @return $value / 2
-};
+
+  @return $value / 2;
+}
 
 .scrolloff {pointer-events: none;}
 
