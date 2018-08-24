@@ -65,7 +65,6 @@ module.exports = {
     // http://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/
     // "id,class,type",
     // selector-max-specificity
-    'declaration-no-important': false,
     'selector-max-compound-selectors': 3,
     'selector-no-qualifying-type': true,
 
