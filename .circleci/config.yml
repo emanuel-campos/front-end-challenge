@@ -31,11 +31,7 @@ jobs:
             - run:
                 name: Testing
                 command: npm run test
-            # Inicia o build do projeto com diferentes configuracoes
-            # correspondente ao branch atual:
-            # - master: ambiente de producao
-            # - staging: simula o ambiente de producao
-            # - develop: ambiente de desenvolvimento
+            # Inicia comando npm para o build do projeto
             - run:
                 name: Building
                 command: |
@@ -79,14 +75,16 @@ workflows:
     build_and_deploy:
         jobs:
             - build
-            # O deploy vai rodar apenas nos branhs filtrados
-            # O build precisa rodar com sucesso para iniciar o deploy
+            # O build precisa rodar com sucesso para iniciar o deploy:
             - deploy:
                 requires:
                     - build
+            # O deploy vai rodar apenas nos branhs filtrados
+            # Branchs correspondentes ao deploy:
+            # - master: ambiente de producao
+            # - staging: simula em ambiente de producao
                 filters:
                     branches:
                         only:
-                            - develop
-                            - staging
                             - master
+                            - staging
