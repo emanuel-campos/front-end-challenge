@@ -1,0 +1,92 @@
+version: 2
+
+jobs:
+    # O build job
+    build:
+        working_directory: ~/project
+        docker:
+            - image: circleci/node:6.10-browsers
+        steps:
+            # Checkout do codigo do branch no diretorio working_directory(~/project)
+            - checkout
+            # Exibe o branch atual
+            - run:
+                name: Show current branch
+                command: echo ${CIRCLE_BRANCH}
+            # Restaura as dependencias do projeto que estao salvas no cache
+            - restore_cache:
+                keys:
+                - v1-dependencies-{{ checksum "package.json" }}
+                - v1-dependencies-
+            # Instala as dependencias do projeto
+            - run:
+                name: Install local dependencies
+                command: npm install
+            # Salva as dependencias do projeto no cache se nao existirem
+            - save_cache:
+                key: v1-dependencies-{{ checksum "package.json" }}
+                paths:
+                    - node_modules
+            # Roda os testes do projeto
+            - run:
+                name: Testing
+                command: npm run test
+            # Inicia o build do projeto com diferentes configuracoes
+            # correspondente ao branch atual:
+            # - master: ambiente de producao
+            # - staging: simula o ambiente de producao
+            # - develop: ambiente de desenvolvimento
+            - run:
+                name: Building
+                command: |
+                    PUBLIC_URL=http://grandmotors-${CIRCLE_BRANCH}.s3-website-sa-east-1.amazonaws.com npm run build
+            # Adiciona o diretorio do build no cache para o deploy job
+            - save_cache:
+                key: v1-build-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+                paths:
+                    - build
+
+    # O deploy job
+    deploy:
+        working_directory: ~/project
+        docker:
+            - image: circleci/node:6.10-browsers
+        steps:
+            # Exibe o branch atual
+            - run:
+                name: Show current branch
+                command: echo ${CIRCLE_BRANCH}
+            # Restaura o cache do build job com
+            # o diretorio que precisa ser deployed
+            - restore_cache:
+                key: v1-build-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+            # Instala o AWS cli
+            - run:
+                name: Install aws cli
+                command:
+                    sudo apt-get -y -qq install awscli
+            # Define a versão da assinatura para o S3 auth
+            - run:
+                name: Setting Signature Version 4 for S3 Request Authentication
+                command: aws configure set default.s3.signature_version s3v4
+            # Deploy para o bucket do S3 correspondente ao branch atual
+            - run:
+                name: Deploy to S3
+                command: aws --region sa-east-1 s3 sync build s3://grandmotors-${CIRCLE_BRANCH}/ --delete
+workflows:
+    version: 2
+    # O fluxo para build e deploy
+    build_and_deploy:
+        jobs:
+            - build
+            # O deploy vai rodar apenas nos branhs filtrados
+            # O build precisa rodar com sucesso para iniciar o deploy
+            - deploy:
+                requires:
+                    - build
+                filters:
+                    branches:
+                        only:
+                            - develop
+                            - staging
+                            - master
