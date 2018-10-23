@@ -118,6 +118,12 @@ $border:                    1px solid $color-gray-light;
 $time-delay:                0.05s;
 $time-duration:             0.25s;
 
+/* Padding between columns */
+$grid-gutter-width:         20px;
+
+/* Width container */
+$container-large-desktop:   (940px + $grid-gutter-width);
+
 @function double($value) {
 
   @return $value * 2;
