@@ -2,6 +2,10 @@ const CleanWebPackPlugin = require('clean-webpack-plugin')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
+function resolve (dir) {
+  return path.join(__dirname, '..', dir)
+}
+
 module.exports = {
   entry: [
     'bootstrap-loader',
@@ -10,6 +14,14 @@ module.exports = {
   output: {
     filename: '[name].[hash].js',
     path: path.resolve('./build')
+  },
+  resolve: {
+    extensions: ['.js'],
+    alias: {
+      '@': resolve('src'),
+      'stylesheets': resolve('src/assets/stylesheets'),
+      'images': resolve('src/assets/images')
+    }
   },
   module: {
     rules: [
