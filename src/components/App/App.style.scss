@@ -1,0 +1,185 @@
+.App-content {
+  min-height: 1000px;
+}
+
+.App {
+  background: #2a2a2a;
+}
+
+.App-Navbar {
+  background-color: transparent;
+  border-bottom: 0;
+}
+
+.App-Nav {
+  padding: 0 20px;
+}
+
+.App-Nav-Item {
+  .App-Nav-Link {
+    > a {
+      padding: 10px 20px;
+      line-height: 1;
+    }
+  }
+}
+
+.App-Nav-Link {
+  > a {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #2a2a2a;
+  }
+}
+
+.App-Nav-BrandUp {
+  padding-right: 0;
+  padding-top: 30px;
+  float: right;
+}
+
+.App-Navbar-Brand {
+
+  @media all and (min-width: 768px) {
+    padding: 25px 40px;
+    padding-left: 0;
+  }
+}
+
+.App-MenuPrincipal {
+
+  .App-MenuPrincipal-Item.open {
+    > a,
+    > a:hover,
+    > a:focus {
+      background-color: transparent;
+      border-color: #ffffff;
+    }
+  }
+
+  .App-MenuPrincipal-Item {
+    > a:focus {
+      background-color: transparent;
+      border-color: #ffffff;
+    }
+  }
+
+  @media all and (min-width: 768px) {
+    .App-MenuPrincipal-Item {
+      > a {
+        padding: 30px 15px 10px;
+      }
+
+      > a:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.App-MenuPrincipal-Item {
+  > a {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #f4f4f4;
+    font-weight: 600;
+  }
+
+  .dropdown-menu {
+    border-radius: 0;
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.45);
+    border: 0;
+  }
+}
+
+.App-MenuPhones {
+  padding-top: 20px;
+
+  .App-MenuPhones-Item.open {
+    > a,
+    > a:hover,
+    > a:focus {
+      background-color: transparent;
+      border-color: #ffffff;
+    }
+  }
+
+  @media all and (min-width: 768px) {
+    .App-MenuPhones-Item {
+      > a {
+        padding: 10px 20px;
+        line-height: 1;
+      }
+
+      > a:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.App-MenuPhones-Item {
+  > a {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #f4f4f4;
+    font-weight: 600;
+    border: 2px solid #ffffff;
+    line-height: 1;
+  }
+}
+
+.App-MenuVeiculos {
+  .dropdown-menu {
+    overflow-y: scroll;
+    max-height: 270px;
+    border-top: 15px solid #ffffff;
+    border-bottom: 15px solid #ffffff;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &::-webkit-scrollbar {
+      width: 20px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #d7d6d7;
+      border-radius: 8px;
+      border-left: 8px solid #ffffff;
+      border-right: 8px solid #ffffff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #373435;
+      border-radius: 8px;
+      border-left: 8px solid #ffffff;
+      border-right: 8px solid #ffffff;
+    }
+  }
+
+  .App-MenuVeiculos-Item:first-child {
+    > a {
+      padding-top: 0;
+    }
+  }
+
+  .App-MenuVeiculos-Item:last-child {
+    > a {
+      padding-bottom: 0;
+    }
+  }
+
+  .App-MenuVeiculos-Item {
+    > a:hover,
+    > a:focus {
+      background-color: transparent;
+    }
+  }
+}
+
+.App-MenuVeiculos-Titulo {
+  display: inline-block;
+  min-width: 140px;
+  vertical-align: middle;
+  font-weight: 700;
+}
