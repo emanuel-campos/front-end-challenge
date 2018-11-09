@@ -1,5 +1,10 @@
+// imagens usadas no componente
+import LogoGrandMotors from 'images/logo-grand-motors.png';
+import LogoToyota from 'images/logo-toyota.png';
+
 import CarroEtiosHatch from 'images/etios-hatch.png';
 
+// informacoes sobre os telefones de contato
 const MockPhones = [
   {
     name: 'Toyota Nações Unidas',
@@ -17,6 +22,7 @@ const MockPhones = [
   },
 ];
 
+// simulacao de dados dos carros listados no menu "Nossos Veiculos"
 const MockCars = [
   { name: 'Etios Sedã 2017', icon: CarroEtiosHatch },
   { name: 'Etios Sedã 2017', icon: CarroEtiosHatch },
@@ -27,4 +33,9 @@ const MockCars = [
   { name: 'Etios Sedã 2017', icon: CarroEtiosHatch },
 ];
 
-export { MockCars, MockPhones };
+export {
+  MockCars,
+  MockPhones,
+  LogoGrandMotors,
+  LogoToyota,
+};
