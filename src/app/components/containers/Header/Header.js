@@ -86,7 +86,7 @@ class Header extends Component {
             </Nav>
             {/* END menu phones */}
 
-            <div className="header-nav header-nav-brandup" pullRight>
+            <div className="header-nav header-nav-brandup pull-right">
               <Navbar.Link href="#">
                 <img alt="Toyota" src={LogoToyota} />
               </Navbar.Link>
