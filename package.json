@@ -21,6 +21,7 @@
   "homepage": "https://github.com/emanuel-campos/front-end-challenge#readme",
   "dependencies": {
     "font-awesome": "^4.7.0",
+    "prop-types": "^15.6.2",
     "react": "^16.4.0",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.0",

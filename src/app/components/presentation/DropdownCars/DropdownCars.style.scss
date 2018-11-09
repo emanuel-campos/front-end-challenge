@@ -1,0 +1,78 @@
+.dropdowncars {
+
+  @include media-queries('tablet') {
+    .dropdown-menu {
+      overflow-y: scroll;
+      max-height: 270px;
+      border-top: 15px solid $color-white;
+      border-bottom: 15px solid $color-white;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      &::-webkit-scrollbar {
+        width: 20px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #d7d6d7;
+        border-radius: 8px;
+        border-left: 8px solid $color-white;
+        border-right: 8px solid $color-white;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #373435;
+        border-radius: 8px;
+        border-left: 8px solid $color-white;
+        border-right: 8px solid $color-white;
+      }
+    }
+  }
+
+  @include media-queries('tablet') {
+    > a {
+      padding: $padding-extra $padding-small $padding-wee;
+    }
+
+    > a:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.dropdowncars-item {
+  > a {
+    padding: $padding-wee $padding-base;
+
+    @include font-text(
+      $font-size-small,
+      $text-color,
+      $font-weight-normal,
+      uppercase,
+      1);
+  }
+
+  > a:hover,
+  > a:focus {
+    background-color: transparent !important; /** important para sobrescrever estilo bootstrap **/
+  }
+
+  &:first-child {
+    > a {
+      padding-top: 0;
+    }
+  }
+
+  &:last-child {
+    > a {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.dropdowncars-item-titulo {
+  display: inline-block;
+  min-width: 140px;
+  vertical-align: middle;
+  font-weight: $font-weight-bold;
+}
