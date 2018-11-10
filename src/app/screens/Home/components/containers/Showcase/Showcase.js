@@ -31,7 +31,7 @@ class Showcase extends Component {
         <div className="showcase-pelicula" />
         <div className="showcase-wrapper">
           <Grid>
-            <Row className="show-grid">
+            <Row>
               <Col xs={12} md={4}>
                 <div className="showcase-simulatefinancing" id="showcase-simulatefinancing">
                   <SimulateFinancing

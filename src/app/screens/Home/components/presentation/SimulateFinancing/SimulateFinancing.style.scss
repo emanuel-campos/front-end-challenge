@@ -89,3 +89,81 @@
     background-color: #db5168;
   }
 }
+
+/* BEGIN custom radio bootstrap */
+.simulatefinancing-radio {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.simulatefinancing-radio-mark {
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 0;
+  top: 0;
+  border: 2px solid $color-white;
+  border-radius: 50%;
+}
+
+.simulatefinancing-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+  &:checked ~ .simulatefinancing-radio-mark {
+    &:after {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: $color-white;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+/* END custom radio bootstrap */
+
+/* BEGIN custom checkbox bootstrap */
+.simulatefinancing-checkbox-mark {
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 0;
+  top: 0;
+  border: 2px solid $color-white;
+  border-radius: 2px;
+}
+
+.simulatefinancing-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+  &:checked ~ .simulatefinancing-checkbox-mark {
+    &:after {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: $color-white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+/* END custom checkbox bootstrap */

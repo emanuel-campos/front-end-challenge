@@ -7,6 +7,8 @@ import {
   Checkbox,
   Radio,
   Button,
+  Row,
+  Col,
 } from 'react-bootstrap';
 import { bootstrapUtils } from 'react-bootstrap/lib/utils';
 
@@ -35,7 +37,7 @@ class SimulateFinancing extends Component {
       nome: '',
       email: '',
       telefone: '',
-      parcela: '',
+      parcela: '12',
       valorEntrada: '',
       receberOfertas: '',
     };
@@ -136,44 +138,56 @@ class SimulateFinancing extends Component {
           {/* BEGIN group parcelas */}
           <FormGroup>
             <ControlLabel className="simulatefinancing-label">Número de parcelas*</ControlLabel>
-            <div>
-              <Radio
-                name="parcela"
-                value="12"
-                onChange={this.handleChange}
-                checked={this.state.parcela === '12'}
-                inline
-              >
-                12
-              </Radio>{' '}
-              <Radio
-                name="parcela"
-                value="24"
-                onChange={this.handleChange}
-                checked={this.state.parcela === '24'}
-                inline
-              >
-                24
-              </Radio>{' '}
-              <Radio
-                name="parcela"
-                value="36"
-                onChange={this.handleChange}
-                checked={this.state.parcela === '36'}
-                inline
-              >
-                36
-              </Radio>{' '}
-              <Radio
-                name="parcela"
-                value="48"
-                onChange={this.handleChange}
-                checked={this.state.parcela === '48'}
-                inline
-              >
-                48
-              </Radio>
-            </div>
+            <Row>
+              <Col xs={3} md={3}>
+                <Radio
+                  className="simulatefinancing-radio"
+                  name="parcela"
+                  value="12"
+                  onChange={this.handleChange}
+                  checked={this.state.parcela === '12'}
+                >
+                  12
+                  <span className="simulatefinancing-radio-mark" />
+                </Radio>
+              </Col>
+              <Col xs={3} md={3}>
+                <Radio
+                  className="simulatefinancing-radio"
+                  name="parcela"
+                  value="24"
+                  onChange={this.handleChange}
+                  checked={this.state.parcela === '24'}
+                >
+                  24
+                  <span className="simulatefinancing-radio-mark" />
+                </Radio>
+              </Col>
+              <Col xs={3} md={3}>
+                <Radio
+                  className="simulatefinancing-radio"
+                  name="parcela"
+                  value="36"
+                  onChange={this.handleChange}
+                  checked={this.state.parcela === '36'}
+                >
+                  36
+                  <span className="simulatefinancing-radio-mark" />
+                </Radio>
+              </Col>
+              <Col xs={3} md={3}>
+                <Radio
+                  className="simulatefinancing-radio"
+                  name="parcela"
+                  value="48"
+                  onChange={this.handleChange}
+                  checked={this.state.parcela === '48'}
+                >
+                  48
+                  <span className="simulatefinancing-radio-mark" />
+                </Radio>
+              </Col>
+            </Row>
           </FormGroup>
           {/* END group parcelas */}
 
@@ -196,12 +210,13 @@ class SimulateFinancing extends Component {
 
             {/* BEGIN check ofertas */}
             <Checkbox
-              className="simulatefinancing-boxofertas"
+              className="simulatefinancing-boxofertas simulatefinancing-checkbox"
               name="receberOfertas"
               value={this.state.receberOfertas}
               onChange={this.handleChange}
               inline
             >
+              <span className="simulatefinancing-checkbox-mark" />
               Desejo receber ofertas exclusivas da PG Prime.
             </Checkbox>
             {/* END check ofertas */}
