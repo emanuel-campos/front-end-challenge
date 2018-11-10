@@ -9,6 +9,12 @@ import FacebookLike from '@/app/components/presentation/FacebookLike/FacebookLik
 import FacebookShare from '@/app/components/presentation/FacebookShare/FacebookShare';
 import SimulateFinancing from '../../presentation/SimulateFinancing/SimulateFinancing';
 
+// mock de dados usados no container Showcase
+import {
+  MockVersions,
+  MockInstallments,
+} from './Showcase.data';
+
 // estilo Sass para o componente
 import './Showcase.style.scss';
 
@@ -37,6 +43,8 @@ class Showcase extends Component {
                   <SimulateFinancing
                     title="Simular Financiamento"
                     description="Escolha a parcela que cabe no seu bolso."
+                    versions={MockVersions}
+                    installments={MockInstallments}
                   />
                 </div>
               </Col>

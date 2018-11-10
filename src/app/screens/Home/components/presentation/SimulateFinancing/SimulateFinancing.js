@@ -81,8 +81,9 @@ class SimulateFinancing extends Component {
               onChange={this.handleChange}
               className="simulatefinancing-input"
             >
-              <option value="1.8">1.8</option>
-              <option value="2.0">2.0</option>
+              {this.props.versions.map(version => (
+                <option value="{version}">{version}</option>
+              ))}
             </FormControl>
             {/* END input versao */}
 
@@ -139,54 +140,20 @@ class SimulateFinancing extends Component {
           <FormGroup>
             <ControlLabel className="simulatefinancing-label">Número de parcelas*</ControlLabel>
             <Row>
-              <Col xs={3} md={3}>
-                <Radio
-                  className="simulatefinancing-radio"
-                  name="parcela"
-                  value="12"
-                  onChange={this.handleChange}
-                  checked={this.state.parcela === '12'}
-                >
-                  12
-                  <span className="simulatefinancing-radio-mark" />
-                </Radio>
-              </Col>
-              <Col xs={3} md={3}>
-                <Radio
-                  className="simulatefinancing-radio"
-                  name="parcela"
-                  value="24"
-                  onChange={this.handleChange}
-                  checked={this.state.parcela === '24'}
-                >
-                  24
-                  <span className="simulatefinancing-radio-mark" />
-                </Radio>
-              </Col>
-              <Col xs={3} md={3}>
-                <Radio
-                  className="simulatefinancing-radio"
-                  name="parcela"
-                  value="36"
-                  onChange={this.handleChange}
-                  checked={this.state.parcela === '36'}
-                >
-                  36
-                  <span className="simulatefinancing-radio-mark" />
-                </Radio>
-              </Col>
-              <Col xs={3} md={3}>
-                <Radio
-                  className="simulatefinancing-radio"
-                  name="parcela"
-                  value="48"
-                  onChange={this.handleChange}
-                  checked={this.state.parcela === '48'}
-                >
-                  48
-                  <span className="simulatefinancing-radio-mark" />
-                </Radio>
-              </Col>
+              {this.props.installments.map(installment => (
+                <Col xs={3} md={3}>
+                  <Radio
+                    className="simulatefinancing-radio"
+                    name="parcela"
+                    value={installment}
+                    onChange={this.handleChange}
+                    checked={this.state.parcela === installment}
+                  >
+                    {installment}
+                    <span className="simulatefinancing-radio-mark" />
+                  </Radio>
+                </Col>
+              ))}
             </Row>
           </FormGroup>
           {/* END group parcelas */}
@@ -234,6 +201,8 @@ class SimulateFinancing extends Component {
 SimulateFinancing.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  versions: PropTypes.arrayOf(PropTypes.string).isRequired,
+  installments: PropTypes.arrayOf(PropTypes.string).isRequired,
   showHeader: PropTypes.bool,
 };
 
