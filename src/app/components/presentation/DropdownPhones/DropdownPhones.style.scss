@@ -23,12 +23,16 @@
   .dropdown-toggle {
     line-height: 1;
     margin-bottom: $margin-wee;
-    padding-top: $padding-wee;
-    padding-bottom: $padding-wee;
+    padding-top: $padding-tiny;
+    padding-bottom: $padding-tiny;
 
     &:hover,
     &:focus {
       background-color: transparent;
+    }
+
+    span {
+      margin-right: $margin-tiny;
     }
   }
 
@@ -81,6 +85,7 @@
 
 .dropdownphones-icon {
   margin-right: $margin-wee;
+  font-size: 16px;
 }
 
 .dropdownphones-title {
