@@ -23,7 +23,11 @@ class Showcase extends Component {
   render() {
     return (
       <div className="showcase">
-        <div className="showcase-areavideo" />
+        <div className="showcase-areavideo">
+          <div className="showcase-areavideo-player">
+            <iframe className="showcase-areavideo-frame" src="https://player.vimeo.com/video/125018656?background=1" title="Video" frameBorder="0" />
+          </div>
+        </div>
         <div className="showcase-pelicula" />
         <div className="showcase-wrapper">
           <Grid>
