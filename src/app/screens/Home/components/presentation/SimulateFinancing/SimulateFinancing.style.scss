@@ -52,6 +52,11 @@
   border: 1px solid $color-gray;
   border-radius: $border-radius;
   background-color: transparent;
+
+  &:focus {
+    box-shadow: none;
+    border-color: $color-white;
+  }
 }
 
 .simulatefinancing-boxofertas {
