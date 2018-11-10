@@ -52,6 +52,8 @@
   border: 1px solid $color-gray;
   border-radius: $border-radius;
   background-color: transparent;
+  padding: $padding-tiny $padding-wee;
+  height: 31px;
 
   &:focus {
     box-shadow: none;
