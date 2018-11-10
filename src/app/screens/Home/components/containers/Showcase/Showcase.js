@@ -5,6 +5,8 @@ import {
   Col,
 } from 'react-bootstrap';
 
+import FacebookLike from '@/app/components/presentation/FacebookLike/FacebookLike';
+import FacebookShare from '@/app/components/presentation/FacebookShare/FacebookShare';
 import SimulateFinancing from '../../presentation/SimulateFinancing/SimulateFinancing';
 
 // estilo Sass para o componente
@@ -61,29 +63,17 @@ class Showcase extends Component {
                       <div className="showcase-social-title">Gostou? Então Compartilhe.</div>
                       <ul className="showcase-social-buttonlist">
                         <li className="showcase-social-buttonitem">
-                          <iframe
-                            title="Curtir"
-                            src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=92&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId"
-                            width="92"
-                            height="21"
-                            style={{ border: 'none', overflow: 'hidden' }}
-                            scrolling="no"
-                            frameBorder="0"
-                            allowTransparency="true"
-                            allow="encrypted-media"
+                          <FacebookLike
+                            url="https://www.facebook.com/ToyotaGrandMotors/"
+                            width="82"
+                            height="20"
                           />
                         </li>
                         <li className="showcase-social-buttonitem">
-                          <iframe
-                            title="Compartilhar"
-                            src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button_count&size=small&mobile_iframe=true&width=131&height=20&appId"
-                            width="131"
+                          <FacebookShare
+                            url="https://www.facebook.com/ToyotaGrandMotors/"
+                            width="120"
                             height="20"
-                            style={{ border: 'none', overflow: 'hidden' }}
-                            scrolling="no"
-                            frameBorder="0"
-                            allowTransparency="true"
-                            allow="encrypted-media"
                           />
                         </li>
                       </ul>
