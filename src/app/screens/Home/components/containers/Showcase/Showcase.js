@@ -5,6 +5,8 @@ import {
   Col,
 } from 'react-bootstrap';
 
+import SimulateFinancing from '../../presentation/SimulateFinancing/SimulateFinancing';
+
 // estilo Sass para o componente
 import './Showcase.style.scss';
 
@@ -19,14 +21,81 @@ class Showcase extends Component {
   render() {
     return (
       <div className="showcase">
+        <div className="showcase-areavideo" />
+        <div className="showcase-pelicula" />
         <div className="showcase-wrapper">
           <Grid>
             <Row className="show-grid">
               <Col xs={12} md={4}>
-                teste menu
+                <div className="showcase-simulatefinancing" id="showcase-simulatefinancing">
+                  <SimulateFinancing
+                    title="Simular Financiamento"
+                    description="Escolha a parcela que cabe no seu bolso."
+                  />
+                </div>
               </Col>
               <Col xs={12} md={8}>
-                teste conteudo
+                <div className="showcase-content">
+                  <div className="showcase-header">
+                    <h2 className="showcase-title">
+                      Etios Hatch 2017
+                      <small>X 1.3 Manual</small>
+                    </h2>
+                    <h3 className="showcase-subtitle">Você tem mais para descobrir.</h3>
+                  </div>
+
+                  <div className="showcase-price">
+                    <div className="showcase-price-old">
+                      de <strike>R$ 44.120,00</strike>
+                    </div>
+                    <div className="showcase-price-new">
+                      por <span className="showcase-price-number">R$ 40.987,00</span>
+                    </div>
+                    <div className="showcase-price-condicoes">
+                      *Consulte as Condições Comerciais.
+                    </div>
+                  </div>
+
+                  <div className="showcase-footer">
+                    <div className="showcase-social">
+                      <div className="showcase-social-title">Gostou? Então Compartilhe.</div>
+                      <ul className="showcase-social-buttonlist">
+                        <li className="showcase-social-buttonitem">
+                          <iframe
+                            title="Curtir"
+                            src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=92&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId"
+                            width="92"
+                            height="21"
+                            style={{ border: 'none', overflow: 'hidden' }}
+                            scrolling="no"
+                            frameBorder="0"
+                            allowTransparency="true"
+                            allow="encrypted-media"
+                          />
+                        </li>
+                        <li className="showcase-social-buttonitem">
+                          <iframe
+                            title="Compartilhar"
+                            src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button_count&size=small&mobile_iframe=true&width=131&height=20&appId"
+                            width="131"
+                            height="20"
+                            style={{ border: 'none', overflow: 'hidden' }}
+                            scrolling="no"
+                            frameBorder="0"
+                            allowTransparency="true"
+                            allow="encrypted-media"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="showcase-note">
+                      *Imagens meramente ilustrativas. Alguns itens apresentados poderão não
+                      estar disponíveis nas versoes. Preços sugeridos e válidos até 31/07/2015.
+                      Os preços poderão ser modificadas sem aviso prévio.
+                      Consulte e confirme todas as informações com um de nossos vendedores.
+                    </div>
+                  </div>
+                </div>
               </Col>
             </Row>
           </Grid>
