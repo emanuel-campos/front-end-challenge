@@ -24,7 +24,9 @@ class DropdownCars extends Component {
         {this.props.items.map((item, index) => (
           <MenuItem className="dropdowncars-item" key={index.toString()}>
             <span className="dropdowncars-item-titulo">{item.name}</span>
-            <img className="dropdowncars-item-icone" src={item.icon} alt={item.name} />
+            {item.icon && (
+              <img className="dropdowncars-item-icone" src={item.icon} alt={item.name} />
+            )}
           </MenuItem>
         ))}
       </NavDropdown>
