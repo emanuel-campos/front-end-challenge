@@ -24,7 +24,6 @@ class FacebookShare extends Component {
         height={this.props.height}
         scrolling="no"
         frameBorder="0"
-        allowTransparency="true"
         allow="encrypted-media"
       />
     );
