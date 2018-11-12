@@ -71,6 +71,6 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: 'index.html'
     }),
-    new CleanWebPackPlugin(['dist'])
+    new CleanWebPackPlugin(['build'])
   ]
 }

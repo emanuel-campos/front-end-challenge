@@ -1,0 +1,173 @@
+.simulatefinancing {
+  font-size: $font-size-small;
+  color: $color-font;
+}
+
+.simulatefinancing-header {
+  text-align: center;
+}
+
+.simulatefinancing-title {
+  margin-top: 0;
+  margin-bottom: $margin-tiny;
+
+  @include font-text(
+    $font-size-large,
+    inherit,
+    $font-weight-normal,
+    uppercase);
+}
+
+.simulatefinancing-description {
+
+  @include font-text(
+    inherit,
+    inherit,
+    $font-weight-light);
+}
+
+.simulatefinancing-separator {
+  border-bottom: 1px solid $color-gray-dark;
+  margin: $margin-small 0;
+}
+
+.simulatefinancing-link {
+  text-decoration: underline;
+  color: inherit;
+  font-size: inherit;
+  padding: 0;
+
+  &:hover {
+    color: $color-font;
+  }
+}
+
+.simulatefinancing-label {
+  font-weight: $font-weight-semi-bold;
+}
+
+.simulatefinancing-input {
+  font-size: $font-size-small;
+  color: inherit;
+  border: 1px solid $color-gray;
+  border-radius: $border-radius;
+  background-color: transparent;
+  padding: $padding-tiny $padding-wee;
+  height: 31px;
+
+  &:focus {
+    box-shadow: none;
+    border-color: $color-white;
+  }
+
+  option {
+    color: $text-color;
+  }
+}
+
+.simulatefinancing-boxofertas {
+  font-size: $font-size-wee;
+}
+
+.simulatefinancing-submit {
+  width: 100%;
+  border-radius: $border-radius;
+  border: 0;
+  border-top: 2px solid #d32e51;
+  border-bottom: 1px solid #1b0f11;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+  background-color: #b71d3e;
+  padding: $padding-small;
+  margin-bottom: $margin-middle;
+
+  @include font-text(
+    $font-size-base,
+    inherit,
+    $font-weight-bold,
+    uppercase,
+    1);
+
+  &:hover {
+    color: $color-font;
+    border-top-color: #db5168;
+    background-color: #db5168;
+  }
+}
+
+/* BEGIN custom radio bootstrap */
+.simulatefinancing-radio {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.simulatefinancing-radio-mark {
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 0;
+  top: 0;
+  border: 2px solid $color-white;
+  border-radius: 50%;
+}
+
+.simulatefinancing-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+  &:checked ~ .simulatefinancing-radio-mark {
+    &:after {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: $color-white;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+/* END custom radio bootstrap */
+
+/* BEGIN custom checkbox bootstrap */
+.simulatefinancing-checkbox-mark {
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 0;
+  top: 0;
+  border: 2px solid $color-white;
+  border-radius: 2px;
+}
+
+.simulatefinancing-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+  &:checked ~ .simulatefinancing-checkbox-mark {
+    &:after {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: $color-white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+/* END custom checkbox bootstrap */

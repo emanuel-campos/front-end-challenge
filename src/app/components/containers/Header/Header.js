@@ -8,19 +8,21 @@ import {
 } from 'react-bootstrap';
 import { bootstrapUtils } from 'react-bootstrap/lib/utils';
 
-// imagens usadas no componente
-import LogoGrandMotors from 'images/logo-grand-motors.png';
-import LogoToyota from 'images/logo-toyota.png';
-
 // estilo Sass para o componente
 import 'font-awesome/scss/font-awesome.scss';
 import './Header.style.scss';
 
+// componentes "presentation"
 import DropdownCars from '../../presentation/DropdownCars/DropdownCars';
 import DropdownPhones from '../../presentation/DropdownPhones/DropdownPhones';
 
-// mock de dados usado no container Header
-import { MockCars, MockPhones } from './Header.data';
+// mock de dados usados no container Header
+import {
+  MockCars,
+  MockPhones,
+  LogoGrandMotors,
+  LogoToyota,
+} from './Header.data';
 
 // remove o estilo padrão para o componente Navbar do Bootstrap
 bootstrapUtils.addStyle(Navbar, 'no-style');
@@ -84,15 +86,13 @@ class Header extends Component {
             </Nav>
             {/* END menu phones */}
 
-            <div className="header-nav header-nav-brandup" pullRight>
+            <div className="header-nav header-nav-brandup pull-right">
               <Navbar.Link href="#">
                 <img alt="Toyota" src={LogoToyota} />
               </Navbar.Link>
             </div>
           </Navbar.Collapse>
         </Navbar>
-
-        <div className="header-content">t</div>
       </div>
     );
   }
