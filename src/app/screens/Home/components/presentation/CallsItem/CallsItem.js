@@ -14,7 +14,9 @@ class CallsItem extends Component {
     return (
       <div className="callsitem">
         <h2 className="callsitem-title">
-          {this.props.title}
+          <span className="callsitem-title-text">
+            {this.props.title}
+          </span>
 
           <span className="callsitem-subtitle">
             {this.props.subtitle}
