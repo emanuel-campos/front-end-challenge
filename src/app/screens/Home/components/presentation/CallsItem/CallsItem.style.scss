@@ -1,0 +1,31 @@
+.callsitem {
+  text-align: center;
+
+  @include font-text(
+    $font-size-base,
+    $color-gray
+  );
+}
+
+.callsitem-title {
+  margin-top: 0;
+  margin-bottom: $margin-wee;
+
+  @include font-text(
+    $font-size-h3,
+    $color-font,
+    $font-weight-light
+  );
+}
+
+.callsitem-subtitle {
+  display: block;
+  margin-top: $margin-wee;
+
+  @include font-text(
+    $font-size-h1,
+    #d33c5c,
+    $font-weight-normal,
+    uppercase
+  );
+}
