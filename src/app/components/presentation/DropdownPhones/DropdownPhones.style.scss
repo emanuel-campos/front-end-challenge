@@ -92,6 +92,7 @@
   display: block;
   min-width: 260px;
   padding: $padding-base;
+  background-color: $color-white;
 
   @include font-text(
     $font-size-base,

@@ -6,13 +6,9 @@ import {
 } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import FontAwesome from 'react-fontawesome';
-import { bootstrapUtils } from 'react-bootstrap/lib/utils';
 
 // estilo Sass para o componente
 import './DropdownPhones.style.scss';
-
-// remove o estilo padrão para o componente "Panel" do Bootstrap
-bootstrapUtils.addStyle(Panel, 'dropdownphones');
 
 /**
  * O objetivo deste componente é criar uma versão
@@ -54,8 +50,8 @@ class DropdownPhones extends Component {
         >
 
           {/* BEGIN place item */}
-          {this.props.places.map((place, index) => (
-            <Panel bsStyle="dropdownphones" eventKey={index}>
+          {this.props.places.map((place, placeIndex) => (
+            <Panel bsStyle="" eventKey={placeIndex} key={placeIndex.toString()}>
               <Panel.Heading>
                 <Panel.Title
                   onClick={() => this.dropdownToggle(true)}
@@ -74,8 +70,8 @@ class DropdownPhones extends Component {
                 <ul className="dropdownphones-list">
 
                   {/* BEGIN phone item */}
-                  {place.phones.map(phone => (
-                    <li className="dropdownphones-item">
+                  {place.phones.map((phone, phoneIndex) => (
+                    <li className="dropdownphones-item" key={phoneIndex.toString()}>
                       <strong className="dropdownphones-fullnumber">
                         <span className="dropdownphones-areacode">({phone.areaCode})</span>
                         <span className="dropdownphones-number">{phone.number}</span>
