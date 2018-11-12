@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '@/app/components/containers/Header/Header';
 import Showcase from './components/containers/Showcase/Showcase';
+import Calls from './components/containers/Calls/Calls';
 
 /**
  * Este componente é responsável por entregar
@@ -13,6 +14,7 @@ class Home extends Component {
       <div>
         <Header />
         <Showcase />
+        <Calls />
       </div>
     );
   }
