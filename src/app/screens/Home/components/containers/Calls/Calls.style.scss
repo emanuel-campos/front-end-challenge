@@ -1,0 +1,27 @@
+.calls {
+  padding: $padding-small 0;
+  background: url('~images/calls/bg.jpg') repeat;
+}
+
+.calls-item {
+  position: relative;
+  min-height: 200px;
+  padding-top: $padding-large;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: rgba(red($color-gray-dark), green($color-gray-dark), blue($color-gray-dark), .1);
+  }
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+}
