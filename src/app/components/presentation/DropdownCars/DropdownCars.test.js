@@ -44,50 +44,50 @@ describe('<DropdownCars />', () => {
 
     // 1 - Renderizar o componente sem erros
     test('Should render DropdownCars without errors', () => {
-        const wrapperRender = render(<DropdownCars items={cars} title="Nossos Veículos" id="nossos-veiculos-dropdown" />)
+      const wrapperRender = render(<DropdownCars items={cars} title="Nossos Veículos" id="nossos-veiculos-dropdown" />);
     })
 
     // 2 - Listar todos os veiculos recebidos pela prop
     test('Should list all cars', () => {
-        expect(wrapper.find('.dropdowncars-item')).toHaveLength(cars.length);
+      expect(wrapper.find('.dropdowncars-item')).toHaveLength(cars.length);
     })
 
     // 3 - Carregar uma tag img para o icone do carro
     test('Should load an img tag for the car icon', () => {
-        expect(
-          wrapper.find('.dropdowncars-item')
-          .at(0)
-          .find('img')
-          .exists())
-        .toBeTruthy();
+      expect(
+        wrapper.find('.dropdowncars-item')
+        .at(0)
+        .find('img')
+        .exists())
+      .toBeTruthy();
     })
 
     // 4 - A prop img src deve receber o valor da url/path passada
     test('Should load an img tag for the car icon', () => {
-        expect(
-          wrapper.find('.dropdowncars-item').at(0)
-          .find('img').at(0)
-          .props().src)
-        .toEqual(cars[0].icon);
+      expect(
+        wrapper.find('.dropdowncars-item').at(0)
+        .find('img').at(0)
+        .props().src)
+      .toEqual(cars[0].icon);
     })
 
     // 5 - Não deve renderizar o img se o icone do carro não for passado
     test('Should not render the img if the car icon is not passed', () => {
-        expect(
-          wrapper.find('.dropdowncars-item')
-          .at(3) // exemplo de objeto "car" sem icon
-          .find('img')
-          .exists())
-        .toBeFalsy();
+      expect(
+        wrapper.find('.dropdowncars-item')
+        .at(3) // exemplo de objeto "car" sem icon
+        .find('img')
+        .exists())
+      .toBeFalsy();
     })
 
     // 6 - Mostrar texto com o nome dos veiculos na lista
     test('Should show text with the vehicles name in the list', () => {
-        expect(
-          wrapper.find('.dropdowncars-item')
-          .at(0)
-          .find('span').at(0)
-          .text())
-        .toEqual(cars[0].name);
+      expect(
+        wrapper.find('.dropdowncars-item')
+        .at(0)
+        .find('span').at(0)
+        .text())
+      .toEqual(cars[0].name);
     })
 })
