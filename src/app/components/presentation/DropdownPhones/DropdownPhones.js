@@ -53,7 +53,7 @@ class DropdownPhones extends Component {
           className="dropdownphones-wrapper"
         >
 
-          {/* BEGIN palce item */}
+          {/* BEGIN place item */}
           {this.props.places.map((place, index) => (
             <Panel bsStyle="dropdownphones" eventKey={index}>
               <Panel.Heading>
@@ -90,7 +90,7 @@ class DropdownPhones extends Component {
               </Panel.Body>
             </Panel>
           ))}
-          {/* BEGIN palce item */}
+          {/* END place item */}
 
         </PanelGroup>
       </NavDropdown>
