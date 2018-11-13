@@ -1,0 +1,41 @@
+.scrolltags-wrapper {
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #202020;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #d33c5c;
+  }
+}
+
+.scrolltags-list {
+  width: 1000px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.scrolltags-list-item {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 1px;
+  margin-bottom: $margin-wee;
+}
+
+.scrolltags-tag {
+  display: block;
+  padding: $padding-tiny $padding-small;
+  background: #b71d3e;
+  border-radius: 15px;
+
+  @include font-text(
+    $font-size-small,
+    $color-font,
+    $lh: 1
+  );
+}
