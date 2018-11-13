@@ -9,7 +9,21 @@ module.exports = merge(common, {
     host: 'localhost',
     port: 3000,
     open: true,
-    stats: { children: false }
+    stats: {
+      hash: false,
+      version: false,
+      timings: false,
+      assets: false,
+      chunks: false,
+      modules: false,
+      reasons: false,
+      children: false,
+      source: false,
+      errors: true,
+      errorDetails: true,
+      warnings: true,
+      publicPath: false
+    }
   },
   plugins: [
     new StyleLintPlugin({
