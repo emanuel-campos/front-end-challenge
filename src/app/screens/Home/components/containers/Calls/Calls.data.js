@@ -1,4 +1,4 @@
-const MockCalls = [
+export default [
   {
     title: 'Imperdível',
     subtitle: 'Taxa Zero %',
@@ -15,5 +15,3 @@ const MockCalls = [
     description: 'Always first off the line. Instant torque delivers full power in a heartbeat.',
   },
 ];
-
-export default MockCalls;
