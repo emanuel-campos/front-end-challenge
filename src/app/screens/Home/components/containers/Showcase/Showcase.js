@@ -5,9 +5,9 @@ import {
   Col,
 } from 'react-bootstrap';
 
-import FacebookLike from '@/app/components/presentation/FacebookLike/FacebookLike';
-import FacebookShare from '@/app/components/presentation/FacebookShare/FacebookShare';
-import SimulateFinancing from '../../presentation/SimulateFinancing/SimulateFinancing';
+import FacebookLike from '@/app/components/presentations/FacebookLike/FacebookLike';
+import FacebookShare from '@/app/components/presentations/FacebookShare/FacebookShare';
+import SimulateFinancing from '../../presentations/SimulateFinancing/SimulateFinancing';
 
 // mock de dados usados no container Showcase
 import {

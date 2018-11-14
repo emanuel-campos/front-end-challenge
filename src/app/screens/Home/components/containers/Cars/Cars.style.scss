@@ -1,0 +1,111 @@
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+.cars {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.cars-title {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding-bottom: $padding-small;
+
+  @include font-text(
+    $font-size-h2,
+    $text-color,
+    $font-weight-light
+  );
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #c3c2c2;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.cars-item-title {
+  margin-top: 0;
+  margin-bottom: $margin-base;
+
+  @include font-text(
+    $font-size-h5,
+    $text-color
+  );
+}
+
+/* BEGIN Carousel react-slick */
+$slick-bg-controls: #a6a6a6;
+
+.slick-slider {
+  margin-bottom: $margin-middle;
+}
+
+.slick-dots {
+  li {
+    margin: 0;
+
+    button:before {
+      font-size: $font-size-small;
+      color: $color-gray !important; // important para sobrescrever estilo da lib
+      opacity: 1 !important; // important para sobrescrever estilo da lib
+    }
+  }
+
+  .slick-active {
+    button:before {
+      color: #b71d3e !important; // important para sobrescrever estilo da lib
+    }
+  }
+}
+
+.slick-arrow {
+  width: 30px;
+  height: 30px;
+  background: $slick-bg-controls;
+  color: $color-font;
+  z-index: 1;
+
+  &:before {
+    font-family: 'FontAwesome';
+    opacity: 1;
+  }
+
+  &:focus,
+  &:hover {
+    background: $slick-bg-controls;
+  }
+}
+
+.slick-prev {
+  left: -40px;
+
+  &:before {
+    content: '\f104';
+  }
+}
+
+.slick-next {
+  right: -40px;
+
+  &:before {
+    content: '\f105';
+  }
+}
+
+.slick-disabled {
+  background: rgba(red($slick-bg-controls), green($slick-bg-controls), blue($slick-bg-controls), .6);
+
+  &:before {
+    opacity: 1 !important; // important para sobrescrever estilo da lib
+  }
+}
+
+/* END Carousel react-slick */

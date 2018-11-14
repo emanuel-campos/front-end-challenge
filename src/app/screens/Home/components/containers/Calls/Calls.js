@@ -5,7 +5,7 @@ import {
   Col,
 } from 'react-bootstrap';
 
-import CallsItem from '../../presentation/CallsItem/CallsItem';
+import CallsItem from '../../presentations/CallsItem/CallsItem';
 
 // mock de dados usados no container Calls
 import MockCalls from './Calls.data';

@@ -4,6 +4,7 @@ import Header from '@/app/components/containers/Header/Header';
 import Showcase from './components/containers/Showcase/Showcase';
 import Calls from './components/containers/Calls/Calls';
 import Versions from './components/containers/Versions/Versions';
+import Cars from './components/containers/Cars/Cars';
 
 /**
  * Este componente é responsável por entregar
@@ -18,6 +19,7 @@ class Home extends Component {
         <Showcase />
         <Calls />
         <Versions />
+        <Cars />
       </div>
     );
   }

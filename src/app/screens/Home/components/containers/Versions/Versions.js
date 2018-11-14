@@ -9,8 +9,8 @@ import {
 } from 'react-bootstrap';
 import { bootstrapUtils } from 'react-bootstrap/lib/utils';
 
-import ScrollTable from '../../presentation/ScrollTable/ScrollTable';
-import ScrollTags from '../../presentation/ScrollTags/ScrollTags';
+import ScrollTable from '../../presentations/ScrollTable/ScrollTable';
+import ScrollTags from '../../presentations/ScrollTags/ScrollTags';
 
 // mock de dados usados no container Versions
 import MockVersions from './Versions.data';
