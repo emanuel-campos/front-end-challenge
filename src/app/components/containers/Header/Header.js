@@ -9,7 +9,6 @@ import {
 import { bootstrapUtils } from 'react-bootstrap/lib/utils';
 
 // estilo Sass para o componente
-import 'font-awesome/scss/font-awesome.scss';
 import './Header.style.scss';
 
 // componentes "presentation"
