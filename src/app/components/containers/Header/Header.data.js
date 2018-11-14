@@ -1,5 +1,5 @@
 // imagens usadas no componente
-import LogoGrandMotors from 'images/header/logo-grand-motors.png';
+import LogoGrandMotors from 'images/logo-grand-motors.png';
 import LogoToyota from 'images/header/logo-toyota.png';
 
 import CarroEtiosHatch from 'images/header/etios-hatch.png';
