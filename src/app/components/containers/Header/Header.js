@@ -11,9 +11,9 @@ import { bootstrapUtils } from 'react-bootstrap/lib/utils';
 // estilo Sass para o componente
 import './Header.style.scss';
 
-// componentes "presentation"
-import DropdownCars from '../../presentation/DropdownCars/DropdownCars';
-import DropdownPhones from '../../presentation/DropdownPhones/DropdownPhones';
+// componentes "presentations"
+import DropdownCars from '../../presentations/DropdownCars/DropdownCars';
+import DropdownPhones from '../../presentations/DropdownPhones/DropdownPhones';
 
 // mock de dados usados no container Header
 import {
