@@ -22,7 +22,6 @@
   /* BEGIN classes padrão Bootstrap */
   .dropdown-toggle {
     line-height: 1;
-    margin-bottom: $margin-wee;
     padding-top: $padding-tiny;
     padding-bottom: $padding-tiny;
 
@@ -38,7 +37,8 @@
 
   .dropdown-menu {
     padding: 0;
-    border-radius: $border-radius !important; /** important para sobrescrever estilo bootstrap **/
+    margin-top: $margin-wee !important; // important para sobrescrever estilo bootstrap
+    border-radius: $border-radius !important; // important para sobrescrever estilo bootstrap
     overflow: hidden;
   }
 

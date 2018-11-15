@@ -52,6 +52,8 @@ $color-background-light:    lighten($color-background-base, 15%);
 
 $color-font:                $color-white;
 
+$color-header-base:         $color-gray-darker;
+
 $color-footer-base:         $color-gray-darker;
 $color-footer-dark:         darken($color-footer-base, 8%);
 $color-footer-light:        lighten($color-footer-base, 15%);
