@@ -1,7 +1,8 @@
-const path = require('path')
-const merge = require('webpack-merge')
-const common = require('./webpack.common.js')
-const StyleLintPlugin = require('stylelint-webpack-plugin')
+const path = require('path');
+const merge = require('webpack-merge');
+const common = require('./webpack.common.js');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = merge(common, {
   mode: 'development',
@@ -26,6 +27,11 @@ module.exports = merge(common, {
     }
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"development"'
+      }
+    }),
     new StyleLintPlugin({
       context: path.resolve(__dirname, '../src'),
       files: ['**/*.s?(a|c)ss']
