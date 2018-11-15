@@ -46,11 +46,11 @@ class Cars extends Component {
               <h2 className="cars-title">Conheça nossos carros</h2>
 
               {/* BEGIN carrossel */}
-              <Carousel {...settingsCarousel}>
+              <Carousel className="cars-carousel" {...settingsCarousel}>
                 {MockCars.map((car, index) => (
-                  <div className="cars-item" key={index.toString()}>
-                    <img className="cars-item-photo" src={car.photo} alt={car.title} />
-                    <h3 className="cars-item-title">{car.title}</h3>
+                  <div className="cars-carousel-item" key={index.toString()}>
+                    <img className="cars-carousel-item-photo" src={car.photo} alt={car.title} />
+                    <h3 className="cars-carousel-item-title">{car.title}</h3>
                   </div>
                 ))}
               </Carousel>

@@ -31,7 +31,7 @@
   }
 }
 
-.cars-item-title {
+.cars-carousel-item-title {
   margin-top: 0;
   margin-bottom: $margin-base;
 
@@ -46,6 +46,23 @@ $slick-bg-controls: #a6a6a6;
 
 .slick-slider {
   margin-bottom: $margin-middle;
+}
+
+.slick-track {
+  &:hover {
+    .cars-carousel-item {
+      opacity: .5;
+    }
+  }
+
+  .cars-carousel-item {
+    transition-delay: $time-delay;
+    transition-duration: $time-duration;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 .slick-dots {

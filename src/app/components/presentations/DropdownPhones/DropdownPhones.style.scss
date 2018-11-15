@@ -28,7 +28,7 @@
 
     &:hover,
     &:focus {
-      background-color: transparent;
+      background-color: rgba(red($color-white), green($color-white), blue($color-white), .1);
     }
 
     span {
