@@ -55,8 +55,8 @@ $slick-bg-controls: #a6a6a6;
   }
 
   .cars-carousel-item {
-    transition-delay: $time-delay;
-    transition-duration: $time-duration;
+
+    @include transition;
 
     &:hover {
       opacity: 1;

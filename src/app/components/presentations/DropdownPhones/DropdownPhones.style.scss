@@ -104,8 +104,8 @@
 
 .dropdownphones-title-icon {
   font-size: 20px;
-  transition-delay: $time-delay;
-  transition-duration: $time-duration;
+
+  @include transition;
 }
 
 .dropdownphones-content {

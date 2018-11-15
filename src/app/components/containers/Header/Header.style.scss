@@ -92,7 +92,7 @@
 .header-scroll {
   .header-navbar {
     background: $color-header-base;
-    transition-delay: $time-delay;
-    transition-duration: $time-duration;
+
+    @include transition;
   }
 }
