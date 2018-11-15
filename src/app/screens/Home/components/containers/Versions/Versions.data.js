@@ -1,4 +1,5 @@
 import PhotoA200 from 'images/versions/a200.png';
+import PhotoCLAAMG from 'images/versions/cla-amg.png';
 
 const MockVersions = [
   {
@@ -39,7 +40,7 @@ const MockVersions = [
   },
   {
     name: 'A 250 Turbo Sport',
-    photo: PhotoA200,
+    photo: PhotoCLAAMG,
     informations: [
       { title: 'Em rev/min', value: '5,500' },
       { title: 'Torque máximo EEC - Nm(libra-pé)', value: '340' },
