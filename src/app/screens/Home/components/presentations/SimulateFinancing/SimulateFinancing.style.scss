@@ -120,16 +120,15 @@
 
   &:checked ~ .simulatefinancing-radio-mark {
     &:after {
-      content: '';
-      display: block;
       width: 6px;
       height: 6px;
       background-color: $color-white;
       border-radius: 50%;
-      position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+
+      @include pseudo;
     }
   }
 }
@@ -157,15 +156,14 @@
 
   &:checked ~ .simulatefinancing-checkbox-mark {
     &:after {
-      content: '';
-      display: block;
       width: 6px;
       height: 6px;
       background-color: $color-white;
-      position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+
+      @include pseudo;
     }
   }
 }
