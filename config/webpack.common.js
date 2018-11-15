@@ -91,7 +91,8 @@ module.exports = {
       chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
     }),
     new HtmlWebPackPlugin({
-      template: 'index.html'
+      template: 'index.html',
+      favicon: './src/assets/images/favicon.png'
     }),
     new CleanWebPackPlugin(['./build'])
   ]
