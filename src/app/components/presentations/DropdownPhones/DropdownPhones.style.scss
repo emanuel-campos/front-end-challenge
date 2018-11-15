@@ -96,7 +96,7 @@
 
   @include font-text(
     $font-size-base,
-    #b71d3e,
+    $link-color,
     $font-weight-bold,
     none,
     1);
@@ -109,7 +109,7 @@
 }
 
 .dropdownphones-content {
-  background-color: #b71d3e;
+  background-color: $color-primary-base;
   padding: 0;
 
   @include font-text(

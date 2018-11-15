@@ -55,7 +55,7 @@
   > a:hover,
   > a:focus {
     background-color: transparent !important; // important para sobrescrever estilo bootstrap
-    color: #b71d3e !important; // important para sobrescrever estilo bootstrap
+    color: $link-color !important; // important para sobrescrever estilo bootstrap
   }
 
   &:first-child {

@@ -28,8 +28,12 @@
 }
 
 .footer-social-icon {
-  width: 35px;
-  height: 35px;
+
+  /* variaveis */
+  $sizeIcon: 35px;
+
+  width: $sizeIcon;
+  height: $sizeIcon;
   display: flex;
   align-items: center;
   justify-content: center;

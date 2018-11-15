@@ -77,7 +77,7 @@ $slick-bg-controls: #a6a6a6;
 
   .slick-active {
     button:before {
-      color: #b71d3e !important; // important para sobrescrever estilo da lib
+      color: $link-color !important; // important para sobrescrever estilo da lib
     }
   }
 }
