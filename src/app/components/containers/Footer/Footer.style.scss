@@ -36,6 +36,8 @@
   background: #5a5a5a;
   font-size: $font-size-h5;
   color: $text-color;
+  transition-delay: $time-delay;
+  transition-duration: $time-duration;
 }
 
 /* BEGIN sociais */
@@ -48,6 +50,12 @@
 
 .footer-assinatura-logo {
   opacity: .5;
+  transition-delay: $time-delay;
+  transition-duration: $time-duration;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 /* END assinatura */
