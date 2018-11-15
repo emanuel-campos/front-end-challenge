@@ -1,5 +1,5 @@
 /* COLOR */
-$color-primary-base:        #04669c;
+$color-primary-base:        #b71d3e;
 $color-primary-dark:        darken($color-primary-base, 12%);
 $color-primary-light:       lighten($color-primary-base, 15%);
 
@@ -51,6 +51,8 @@ $color-background-dark:     darken($color-background-base, 8%);
 $color-background-light:    lighten($color-background-base, 15%);
 
 $color-font:                $color-white;
+
+$color-header-base:         $color-gray-darker;
 
 $color-footer-base:         $color-gray-darker;
 $color-footer-dark:         darken($color-footer-base, 8%);

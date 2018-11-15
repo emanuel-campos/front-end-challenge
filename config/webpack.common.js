@@ -1,6 +1,8 @@
-const CleanWebPackPlugin = require('clean-webpack-plugin')
-const HtmlWebPackPlugin = require('html-webpack-plugin')
-const path = require('path')
+const CleanWebPackPlugin = require('clean-webpack-plugin');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
+const devMode = process.env.NODE_ENV !== 'production'
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -12,7 +14,7 @@ module.exports = {
     './src/index.js'
   ],
   output: {
-    filename: '[name].[hash].js',
+    filename: devMode ? '[name].js' : '[name].[hash].js',
     path: path.resolve('./build')
   },
   resolve: {
@@ -43,7 +45,7 @@ module.exports = {
       {
         test: /\.s(a|c)ss$/,
         use: [
-          { loader: 'style-loader' },
+          { loader: MiniCssExtractPlugin.loader },
           { loader: 'css-loader' },
           { loader: 'sass-loader' },
           {
@@ -59,18 +61,38 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'url-loader'
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+                name: '[hash].[ext]',
+                outputPath: 'images/'
+            }
+          }
+        ]
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url-loader'
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+                name: '[hash].[ext]',
+                outputPath: 'fonts/'
+            }
+          }
+        ]
       }
     ]
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: devMode ? '[name].css' : '[name].[hash].css',
+      chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+    }),
     new HtmlWebPackPlugin({
       template: 'index.html'
     }),
-    new CleanWebPackPlugin(['build'])
+    new CleanWebPackPlugin(['./build'])
   ]
 }

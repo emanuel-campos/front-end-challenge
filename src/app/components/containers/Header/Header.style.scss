@@ -21,22 +21,22 @@
 
     > a:hover,
     > a:focus {
-      color: #b71d3e;
+      color: $link-color;
     }
   }
 }
 
 .header-nav-brandup {
-  padding-right: 0;
-  padding-top: $padding-extra;
+  padding: $padding-middle 0;
   float: right;
 }
 
 .header-navbar-brand {
 
-  @media all and (min-width: 768px) {
-    padding: $padding-middle $padding-big;
+  @include media-queries('tablet') {
+    padding: $padding-base $padding-big;
     padding-left: 0;
+    height: auto;
   }
 }
 
@@ -59,7 +59,7 @@
 
     @include media-queries('tablet') {
       > a {
-        padding: $padding-extra $padding-small $padding-wee;
+        padding: $padding-middle $padding-small;
       }
 
       > a:hover {
@@ -76,8 +76,23 @@
       border-color: $color-white;
     }
   }
+
+  .dropdown-menu {
+    margin-top: -$margin-wee !important; // important para sobrescrever estilo bootstrap
+  }
 }
 
 .header-menuphones {
-  padding-top: $padding-middle;
+
+  @include media-queries('tablet') {
+    padding: $padding-base;
+  }
+}
+
+.header-scroll {
+  .header-navbar {
+    background: $color-header-base;
+
+    @include transition;
+  }
 }

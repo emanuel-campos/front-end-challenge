@@ -32,9 +32,30 @@ bootstrapUtils.addStyle(Navbar, 'no-style');
  */
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      headerFixedScroll: false,
+    };
+
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+    this.setState({
+      headerFixedScroll: (window.scrollY > 50),
+    });
+  }
+
   render() {
     return (
-      <div className="header">
+      <div
+        className={`header ${(this.state.headerFixedScroll ? 'header-scroll' : '')}`}
+      >
         <Navbar
           className="header-navbar"
           bsStyle="no-style"

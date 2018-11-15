@@ -26,10 +26,11 @@
 
 .showcase-areavideo-player {
   width: 100%;
-  padding-top: 56.344086%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+
+  @include height-responsive(116, 67);
 }
 
 .showcase-areavideo-frame {
