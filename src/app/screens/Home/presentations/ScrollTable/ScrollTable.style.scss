@@ -1,0 +1,43 @@
+.scrolltable {
+
+  @include font-text(
+    $font-size-small,
+    $color-gray-dark,
+    $font-weight-normal
+  );
+}
+
+.scrolltable-wrapper {
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #202020;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #d33c5c;
+  }
+}
+
+/* BEGIN row */
+.scrolltable-row {
+  &:nth-child(2n - 1) {
+    background: rgba(255, 255, 255, .05);
+  }
+}
+
+.scrolltable-row-title,
+.scrolltable-row-value {
+  width: 50%;
+  padding: $padding-tiny $padding-wee;
+}
+
+.scrolltable-row-value {
+  color: #d33c5c;
+}
+
+/* END row */

@@ -1,0 +1,19 @@
+@mixin font-text(
+  $size: false,
+  $color: false,
+  $weight: false,
+  $transform: false,
+  $lh: false,
+  $family: $font-family-base) {
+  font-family: $family;
+
+  @if $size { font-size: $size; }
+
+  @if $color { color: $color; }
+
+  @if $weight { font-weight: $weight; }
+
+  @if $transform { text-transform: $transform; }
+
+  @if $lh { line-height: $lh; }
+}

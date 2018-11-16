@@ -10,7 +10,6 @@ useCustomIconFontPath: false
 
 # Webpack loaders, order matters
 styleLoaders:
-  - style-loader
   - css-loader
   - sass-loader
 
@@ -19,7 +18,7 @@ styleLoaders:
 # It depends on value of NODE_ENV environment variable
 # This param can also be set in webpack config:
 #   entry: 'bootstrap-loader/extractStyles'
-extractStyles: false
+extractStyles: true
 # env:
 #   development:
 #     extractStyles: false
@@ -55,8 +54,8 @@ styles:
 
   # Reset and dependencies
   normalize: true
-  print: true
-  glyphicons: true
+  print: false
+  glyphicons: false
 
   # Core CSS
   scaffolding: true
@@ -74,27 +73,27 @@ styles:
   input-groups: true
   navs: true
   navbar: true
-  breadcrumbs: true
-  pagination: true
-  pager: true
+  breadcrumbs: false
+  pagination: false
+  pager: false
   labels: true
   badges: true
-  jumbotron: true
-  thumbnails: true
-  alerts: true
-  progress-bars: true
-  media: true
-  list-group: true
+  jumbotron: false
+  thumbnails: false
+  alerts: false
+  progress-bars: false
+  media: false
+  list-group: false
   panels: true
   wells: true
   responsive-embed: true
   close: true
 
   # Components w/ JavaScript
-  modals: true
-  tooltip: true
-  popovers: true
-  carousel: true
+  modals: false
+  tooltip: false
+  popovers: false
+  carousel: false
 
   # Utility classes
   utilities: true

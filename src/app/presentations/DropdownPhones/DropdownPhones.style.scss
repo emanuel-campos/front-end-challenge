@@ -1,0 +1,143 @@
+.dropdownphones {
+  > a {
+    border: 2px solid $color-white;
+
+    @include font-text(
+      $font-size-base,
+      $color-gray-lighter,
+      $font-weight-semi-bold,
+      uppercase,
+      1);
+  }
+
+  &.open {
+    > a,
+    > a:hover,
+    > a:focus {
+      background-color: transparent;
+      border-color: $color-white;
+    }
+  }
+
+  /* BEGIN classes padrão Bootstrap */
+  .dropdown-toggle {
+    line-height: 1;
+    padding-top: $padding-tiny;
+    padding-bottom: $padding-tiny;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(red($color-white), green($color-white), blue($color-white), .1);
+    }
+
+    span {
+      margin-right: $margin-tiny;
+    }
+  }
+
+  .dropdown-menu {
+    padding: 0;
+    margin-top: $margin-wee !important; // important para sobrescrever estilo bootstrap
+    border-radius: $border-radius !important; // important para sobrescrever estilo bootstrap
+    overflow: hidden;
+  }
+
+  .panel {
+    border-width: 0;
+  }
+
+  .panel-heading {
+    padding: 0;
+  }
+
+  /* END classes padrão Bootstrap */
+
+  @include media-queries('tablet') {
+    > a {
+      padding: $padding-wee $padding-base;
+      line-height: 1;
+    }
+
+    > a:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.dropdownphones-wrapper {
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.collapsed {
+  .dropdownphones-title {
+
+    @include font-text(
+      $font-size-base,
+      $text-color,
+      $font-weight-bold);
+  }
+
+  .dropdownphones-title-icon {
+    transform: rotate(180deg);
+  }
+}
+
+.dropdownphones-icon {
+  margin-right: $margin-wee;
+  font-size: 16px;
+}
+
+.dropdownphones-title {
+  display: block;
+  min-width: 260px;
+  padding: $padding-base;
+  background-color: $color-white;
+
+  @include font-text(
+    $font-size-base,
+    $link-color,
+    $font-weight-bold,
+    none,
+    1);
+}
+
+.dropdownphones-title-icon {
+  font-size: 20px;
+
+  @include transition;
+}
+
+.dropdownphones-content {
+  background-color: $color-primary-base;
+  padding: 0;
+
+  @include font-text(
+    $font-size-base,
+    $color-font,
+    $font-weight-light,
+    none,
+    1);
+}
+
+.dropdownphones-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.dropdownphones-item {
+  border-bottom: 1px solid #cf4462;
+  padding: $padding-small $padding-base;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.dropdownphones-areacode {
+  margin-right: $margin-tiny;
+}
+
+.dropdownphones-separator {
+  padding: 0 $padding-wee;
+}

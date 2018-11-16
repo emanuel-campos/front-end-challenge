@@ -1,5 +1,5 @@
 /* COLOR */
-$color-primary-base:        #04669c;
+$color-primary-base:        #b71d3e;
 $color-primary-dark:        darken($color-primary-base, 12%);
 $color-primary-light:       lighten($color-primary-base, 15%);
 
@@ -51,6 +51,8 @@ $color-background-dark:     darken($color-background-base, 8%);
 $color-background-light:    lighten($color-background-base, 15%);
 
 $color-font:                $color-white;
+
+$color-header-base:         $color-gray-darker;
 
 $color-footer-base:         $color-gray-darker;
 $color-footer-dark:         darken($color-footer-base, 8%);
@@ -118,6 +120,12 @@ $border:                    1px solid $color-gray-light;
 $time-delay:                0.05s;
 $time-duration:             0.25s;
 
+/* Padding between columns */
+$grid-gutter-width:         20px;
+
+/* Width container */
+$container-large-desktop:   (940px + $grid-gutter-width);
+
 @function double($value) {
 
   @return $value * 2;
@@ -132,58 +140,3 @@ $time-duration:             0.25s;
 
   @return $value / 2;
 }
-
-.scrolloff {pointer-events: none;}
-
-.fa-github-alt,
-.fa-pinterest-p,
-.fa-behance,
-.fa-facebook,
-.fa-foursquare,
-.fa-google-plus,
-.fa-instagram,
-.fa-lastfm,
-.fa-linkedin,
-.fa-skype,
-.fa-steam,
-.fa-vine,
-.fa-wordpress,
-.fa-yahoo,
-.fa-vimeo,
-.fa-soundcloud,
-.fa-spotify,
-.fa-twitter,
-.fa-whatsapp,
-.fa-youtube-play {
-  &:hover {color: $color-white;}
-}
-
-.fa-github-alt:hover {background: $color-github !important;}
-.fa-pinterest-p:hover {background: $color-pinterest !important;}
-.fa-behance:hover {background: $color-behance !important;}
-.fa-facebook:hover {background: $color-facebook !important;}
-.fa-foursquare:hover {background: $color-foursquare !important;}
-.fa-google-plus:hover {background: $color-google !important;}
-.fa-instagram:hover {background: $color-instagram !important;}
-.fa-lastfm:hover {background: $color-lastfm !important;}
-.fa-linkedin:hover {background: $color-linkedin !important;}
-.fa-skype:hover {background: $color-skype !important;}
-.fa-steam:hover {background: $color-steam !important;}
-.fa-vine:hover {background: $color-vine !important;}
-.fa-wordpress:hover {background: $color-wordpress !important;}
-.fa-yahoo:hover {background: $color-yahoo !important;}
-.fa-vimeo:hover {background: $color-vimeo !important;}
-.fa-soundcloud:hover {background: $color-soundcloud !important;}
-.fa-spotify:hover {background: $color-spotify !important;}
-.fa-twitter:hover {background: $color-twitter !important;}
-.fa-whatsapp:hover {background: $color-whatsapp !important;}
-.fa-youtube-play:hover {background: $color-youtube !important;}
-
-.fixed {position: fixed;}
-.absolute {position: absolute;}
-.static {position: static;}
-
-.top {top: 0;}
-.right {right: 0;}
-.left {left: 0;}
-.bottom {bottom: 0;}
