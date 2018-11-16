@@ -1,6 +1,8 @@
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const CleanWebPackPlugin = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const path = require('path');
 const devMode = process.env.NODE_ENV !== 'production'
 
@@ -85,6 +87,25 @@ module.exports = {
       }
     ]
   },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: devMode,
+        uglifyOptions: {
+          output: {
+            comments: false
+          }
+        }
+      }),
+      new OptimizeCSSAssetsPlugin({
+        cssProcessorPluginOptions: {
+          preset: ['default', { discardComments: { removeAll: true } }],
+        },
+      })
+    ]
+  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: devMode ? '[name].css' : '[name].[hash].css',
@@ -92,7 +113,11 @@ module.exports = {
     }),
     new HtmlWebPackPlugin({
       template: 'index.html',
-      favicon: './src/assets/images/favicon.png'
+      favicon: './src/assets/images/favicon.png',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+      }
     }),
     new CleanWebPackPlugin(['./build'])
   ]
