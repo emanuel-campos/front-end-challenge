@@ -11,14 +11,24 @@
 }
 
 .footer-logo {
-  text-align: left;
+
+  @include media-queries('tablet') {
+    text-align: left;
+  }
+
+  @include media-queries('tablet', max) {
+    margin-bottom: $margin-base;
+  }
 }
 
 /* BEGIN sociais */
 .footer-social {
   padding-left: 0;
   list-style: none;
-  text-align: right;
+
+  @include media-queries('tablet') {
+    text-align: right;
+  }
 }
 
 .footer-social-item {

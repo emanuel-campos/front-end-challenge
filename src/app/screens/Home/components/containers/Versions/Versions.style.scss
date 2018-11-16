@@ -17,7 +17,7 @@
   margin-top: 110px;
   text-align: center;
 
-  @include media-queries('tablet', max) {
+  @include media-queries('tablet-small', max) {
     margin-top: 0;
   }
 }
@@ -33,11 +33,18 @@
   @include media-queries('tablet') {
     margin-left: -$grid-gutter-width;
   }
+
+  @include media-queries('tablet', max) {
+    margin-top: $margin-small;
+  }
 }
 
 /* BEGIN sidebar */
 .versions-sidebar {
-  text-align: right;
+
+  @include media-queries('tablet') {
+    text-align: right;
+  }
 }
 
 .versions-sidebar-title {

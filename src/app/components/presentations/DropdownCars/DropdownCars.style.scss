@@ -1,6 +1,6 @@
 .dropdowncars {
 
-  @include media-queries('tablet') {
+  @include media-queries('tablet-small') {
     .dropdown-menu {
       overflow-y: scroll;
       max-height: 270px;

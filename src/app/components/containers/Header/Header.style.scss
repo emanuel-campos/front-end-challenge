@@ -1,5 +1,9 @@
 .header-nav {
   padding: 0 $padding-base;
+
+  @include media-queries('tablet', max) {
+    padding: 0;
+  }
 }
 
 .dropdown-menu {
@@ -43,6 +47,7 @@
 .header-menuprincipal {
   > li {
     > a {
+      padding: $padding-middle $padding-small;
 
       @include font-text(
         $font-size-small,
@@ -55,16 +60,6 @@
     > a:focus {
       background-color: transparent;
       border-color: $color-white;
-    }
-
-    @include media-queries('tablet') {
-      > a {
-        padding: $padding-middle $padding-small;
-      }
-
-      > a:hover {
-        background-color: transparent;
-      }
     }
   }
 
@@ -83,9 +78,10 @@
 }
 
 .header-menuphones {
+  padding: $padding-base;
 
-  @include media-queries('tablet') {
-    padding: $padding-base;
+  @include media-queries('tablet', max) {
+    padding: $padding-base 0;
   }
 }
 

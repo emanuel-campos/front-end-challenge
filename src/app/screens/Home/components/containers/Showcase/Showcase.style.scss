@@ -1,6 +1,12 @@
 .showcase {
   padding-top: 105px;
   position: relative;
+  background: rgba(0, 0, 0, .8);
+
+  @include media-queries('tablet', max) {
+    padding-top: 85px;
+    background: url('~images/showcase/bg-mobile.jpg') no-repeat center center/cover;
+  }
 }
 
 .showcase-simulatefinancing {

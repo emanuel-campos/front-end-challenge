@@ -25,7 +25,7 @@ class Calls extends Component {
         <Grid>
           <Row>
             {MockCalls.map((call, index) => (
-              <Col className="calls-item" xs={12} md={4} key={index.toString()}>
+              <Col className="calls-item" xs={12} sm={4} key={index.toString()}>
                 <CallsItem
                   title={call.title}
                   subtitle={call.subtitle}
