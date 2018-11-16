@@ -9,40 +9,14 @@
   margin-bottom: $margin-extra;
 }
 
-.showcase-areavideo,
 .showcase-pelicula {
+  z-index: 1;
+  background: url('~images/showcase/pelicula.png') repeat;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-}
-
-.showcase-areavideo {
-  z-index: 0;
-  background: rgba(0, 0, 0, .8);
-  overflow: hidden;
-}
-
-.showcase-areavideo-player {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-
-  @include height-responsive(116, 67);
-}
-
-.showcase-areavideo-frame {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-}
-
-.showcase-pelicula {
-  z-index: 1;
-  background: url('~images/showcase/pelicula.png') repeat;
 }
 
 .showcase-wrapper {
