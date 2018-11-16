@@ -4,12 +4,18 @@
   @include media-queries('tablet', max) {
     padding: 0;
   }
+
+  @include media-queries('tablet-small', max) {
+    margin: 0;
+  }
 }
 
+/* BEGIN modificando estilo Bootstrap */
 .dropdown-menu {
   box-shadow: 0 1px 24px rgba(0, 0, 0, 0.45);
   border-radius: 0;
   border: 0;
+  background: $color-white !important; // important para sobrescrever estilo bootstrap
 
   li {
     > a {
@@ -29,6 +35,8 @@
     }
   }
 }
+
+/* END modificando estilo Bootstrap */
 
 .header-nav-brandup {
   padding: $padding-middle 0;
@@ -54,6 +62,10 @@
         $color-gray-lighter,
         $font-weight-semi-bold,
         uppercase);
+
+      @include media-queries('tablet', max) {
+        padding: $padding-small;
+      }
     }
 
     > a:hover,
@@ -90,5 +102,28 @@
     background: $color-header-base;
 
     @include transition;
+  }
+}
+
+.header-togglemenu {
+  .icon-bar {
+    background: $color-white;
+    border-radius: 0;
+    height: 3px;
+    width: 30px;
+  }
+
+  .icon-bar + .icon-bar {
+    margin-top: 5px;
+  }
+}
+
+.header-navbar {
+  .navbar-collapse.in {
+    background: $color-header-base;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    max-height: 100%;
   }
 }

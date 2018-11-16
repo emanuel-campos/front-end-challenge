@@ -5,6 +5,12 @@
     $font-size-base,
     $color-gray
   );
+
+  @include media-queries('tablet', max) {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
 }
 
 .callsitem-title {
@@ -16,6 +22,10 @@
     $color-font,
     $font-weight-light
   );
+
+  @include media-queries('tablet', max) {
+    margin-top: $margin-small;
+  }
 }
 
 .callsitem-subtitle {

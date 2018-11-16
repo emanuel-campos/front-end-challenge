@@ -35,6 +35,12 @@
   height: 570px;
   position: relative;
   padding-top: $margin-base;
+
+  @include media-queries('tablet', max) {
+    text-align: center;
+    height: auto;
+    padding-top: 0;
+  }
 }
 
 .showcase-footer {
@@ -42,6 +48,11 @@
   width: 100%;
   bottom: 0;
   left: 0;
+
+  @include media-queries('tablet', max) {
+    position: static;
+    margin-top: $margin-middle;
+  }
 }
 
 .showcase-title {

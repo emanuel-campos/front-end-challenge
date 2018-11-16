@@ -70,7 +70,7 @@ class Header extends Component {
                 <img alt="Grand Motors" src={LogoGrandMotors} />
               </a>
             </Navbar.Brand>
-            <Navbar.Toggle />
+            <Navbar.Toggle className="header-togglemenu" />
           </Navbar.Header>
           {/* END header brand */}
 
