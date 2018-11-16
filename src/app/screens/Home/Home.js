@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-import Header from '@/app/components/containers/Header/Header';
-import Footer from '@/app/components/containers/Footer/Footer';
-import Showcase from './components/containers/Showcase/Showcase';
-import Calls from './components/containers/Calls/Calls';
-import Versions from './components/containers/Versions/Versions';
-import Cars from './components/containers/Cars/Cars';
+import Header from '@/app/containers/Header/Header';
+import Footer from '@/app/containers/Footer/Footer';
+import Showcase from './containers/Showcase/Showcase';
+import Calls from './containers/Calls/Calls';
+import Versions from './containers/Versions/Versions';
+import Cars from './containers/Cars/Cars';
 
 /**
  * Este componente é responsável por entregar

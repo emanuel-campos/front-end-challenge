@@ -5,8 +5,8 @@ import {
   Col,
 } from 'react-bootstrap';
 
-import FacebookLike from '@/app/components/presentations/FacebookLike/FacebookLike';
-import FacebookShare from '@/app/components/presentations/FacebookShare/FacebookShare';
+import FacebookLike from '@/app/presentations/FacebookLike/FacebookLike';
+import FacebookShare from '@/app/presentations/FacebookShare/FacebookShare';
 import SimulateFinancing from '../../presentations/SimulateFinancing/SimulateFinancing';
 import VideoBackground from '../../presentations/VideoBackground/VideoBackground';
 
