@@ -26,24 +26,28 @@ class VideoBackground extends Component {
     this.handleResize();
   }
 
-  // Calcula a largura e altura correta para exibir o video
+  // calcula a largura e altura correta para exibir o video
   handleResize() {
     const widthVideo = this.props.width;
     const heightVideo = this.props.height;
     const elementContainer = document.getElementById('videobackground-container');
-    const widthContainer = elementContainer.offsetWidth;
-    const heightContainer = elementContainer.offsetHeight;
 
-    this.setState({
-      width: widthContainer,
-      height: ((widthContainer * heightVideo) / widthVideo),
-    });
+    // verifica se existe o elemento
+    if (elementContainer) {
+      const widthContainer = elementContainer.offsetWidth;
+      const heightContainer = elementContainer.offsetHeight;
 
-    if (((widthContainer * heightVideo) / widthVideo) < heightContainer) {
       this.setState({
-        width: ((heightContainer * widthVideo) / heightVideo),
-        height: heightContainer,
+        width: widthContainer,
+        height: ((widthContainer * heightVideo) / widthVideo),
       });
+
+      if (((widthContainer * heightVideo) / widthVideo) < heightContainer) {
+        this.setState({
+          width: ((heightContainer * widthVideo) / heightVideo),
+          height: heightContainer,
+        });
+      }
     }
   }
 
