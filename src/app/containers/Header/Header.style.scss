@@ -1,0 +1,138 @@
+.header-nav {
+  padding: 0 $padding-base;
+
+  @include media-queries('tablet', max) {
+    padding: 0;
+  }
+
+  @include media-queries('tablet-small', max) {
+    margin: 0;
+  }
+}
+
+/* BEGIN modificando estilo Bootstrap */
+.dropdown-menu {
+  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.45);
+  border-radius: 0;
+  border: 0;
+  background: $color-white !important; // important para sobrescrever estilo bootstrap
+
+  li {
+    > a {
+      padding: $padding-wee $padding-base !important; // important para sobrescrever estilo bootstrap
+
+      @include font-text(
+        $font-size-small,
+        $text-color,
+        $font-weight-normal,
+        uppercase,
+        1);
+    }
+
+    > a:hover,
+    > a:focus {
+      color: $link-color;
+    }
+  }
+}
+
+/* END modificando estilo Bootstrap */
+
+.header-nav-brandup {
+  padding: $padding-middle 0;
+  float: right;
+}
+
+.header-navbar-brand {
+
+  @include media-queries('tablet') {
+    padding: $padding-base $padding-big;
+    padding-left: 0;
+    height: auto;
+  }
+}
+
+.header-menuprincipal {
+  > li {
+    > a {
+      padding: $padding-middle $padding-small;
+
+      @include font-text(
+        $font-size-small,
+        $color-gray-lighter,
+        $font-weight-semi-bold,
+        uppercase);
+
+      @include media-queries('tablet-small', max) {
+        padding: $padding-small;
+      }
+    }
+
+    > a:hover,
+    > a:focus {
+      background-color: transparent;
+      border-color: $color-white;
+    }
+  }
+
+  .open {
+    > a,
+    > a:hover,
+    > a:focus {
+      background-color: transparent;
+      border-color: $color-white;
+    }
+  }
+
+  .dropdown-menu {
+    margin-top: -$margin-wee !important; // important para sobrescrever estilo bootstrap
+  }
+}
+
+.header-menuphones {
+  padding: $padding-base;
+
+  @include media-queries('tablet', max) {
+    padding: $padding-base 0;
+  }
+}
+
+/* BEGIN topo fixo que acompanha a rolagem */
+.header-scroll {
+  .header-navbar {
+    background: $color-header-base;
+
+    @include transition;
+  }
+}
+
+/* END topo fixo que acompanha a rolagem */
+
+/* BEGIN botão de menu responsivo */
+.header-togglemenu {
+
+  @include font-text(
+    $font-size-base,
+    $color-font,
+    $font-weight-bold,
+    uppercase
+  );
+}
+
+.header-togglemenu-icon {
+  margin-left: $margin-wee;
+  font-size: 26px;
+  vertical-align: middle;
+}
+
+/* END botão de menu responsivo */
+
+.header-navbar {
+  .navbar-collapse.in {
+    background: $color-header-base;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    max-height: 100%;
+  }
+}

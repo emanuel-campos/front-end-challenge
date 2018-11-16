@@ -1,0 +1,133 @@
+.showcase {
+  padding-top: 105px;
+  position: relative;
+
+  @include media-queries('tablet', max) {
+    padding-top: 85px;
+    background: url('~images/showcase/bg-mobile.jpg') no-repeat center center/cover;
+  }
+}
+
+.showcase-simulatefinancing {
+  background: rgba(24, 23, 23, .6);
+  padding: $padding-middle $padding-small;
+  margin-bottom: $margin-extra;
+}
+
+.showcase-pelicula {
+  z-index: 1;
+  background: url('~images/showcase/pelicula.png') repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.showcase-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.showcase-content {
+  color: $color-font;
+  height: 570px;
+  position: relative;
+  padding-top: $margin-base;
+
+  @include media-queries('tablet-small', max) {
+    text-align: center;
+    height: auto;
+    padding-top: 0;
+  }
+}
+
+.showcase-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+
+  @include media-queries('tablet-small', max) {
+    position: static;
+    margin-top: $margin-middle;
+  }
+}
+
+.showcase-title {
+  margin-top: 0;
+  margin-bottom: $margin-base;
+
+  @include font-text(
+    $font-size-h1,
+    inherit,
+    $font-weight-bold,
+    uppercase);
+
+  small {
+    display: block;
+
+    @include font-text(
+      $font-size-h3,
+      inherit,
+      inherit);
+  }
+}
+
+.showcase-subtitle {
+
+  @include font-text(
+    $font-size-large,
+    inherit,
+    $font-weight-semi-bold);
+}
+
+.showcase-price {
+  margin-top: 50px;
+  font-weight: $font-weight-semi-bold;
+}
+
+.showcase-price-old {
+  font-size: $font-size-large;
+  line-height: 1;
+}
+
+.showcase-price-new {
+  font-size: $font-size-h3;
+  line-height: 1;
+  margin-bottom: $margin-wee;
+}
+
+.showcase-price-number {
+  font-size: $font-size-h2;
+}
+
+.showcase-price-condicoes {
+  font-size: $font-size-wee;
+}
+
+.showcase-social {
+  text-align: center;
+  margin-bottom: $margin-small;
+}
+
+.showcase-social-title {
+  margin-bottom: $margin-wee;
+  font-size: $font-size-small;
+}
+
+.showcase-social-buttonlist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.showcase-social-buttonitem {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 $padding-tiny;
+}
+
+.showcase-note {
+  font-size: $font-size-wee;
+  margin-bottom: $margin-base;
+}
