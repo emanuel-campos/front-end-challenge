@@ -1,31 +1,28 @@
 .dropdowncars {
+  .dropdown-menu {
+    overflow-y: scroll;
+    max-height: 270px;
+    border-top: 15px solid $color-white !important; // important para sobrescrever estilo bootstrap
+    border-bottom: 15px solid $color-white !important; // important para sobrescrever estilo bootstrap
+    padding-top: 0;
+    padding-bottom: 0;
 
-  @include media-queries('tablet') {
-    .dropdown-menu {
-      overflow-y: scroll;
-      max-height: 270px;
-      border-top: 15px solid $color-white;
-      border-bottom: 15px solid $color-white;
-      padding-top: 0;
-      padding-bottom: 0;
+    &::-webkit-scrollbar {
+      width: 20px;
+    }
 
-      &::-webkit-scrollbar {
-        width: 20px;
-      }
+    &::-webkit-scrollbar-track {
+      background: #d7d6d7;
+      border-radius: 8px;
+      border-left: 8px solid $color-white;
+      border-right: 8px solid $color-white;
+    }
 
-      &::-webkit-scrollbar-track {
-        background: #d7d6d7;
-        border-radius: 8px;
-        border-left: 8px solid $color-white;
-        border-right: 8px solid $color-white;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background: #373435;
-        border-radius: 8px;
-        border-left: 8px solid $color-white;
-        border-right: 8px solid $color-white;
-      }
+    &::-webkit-scrollbar-thumb {
+      background: #373435;
+      border-radius: 8px;
+      border-left: 8px solid $color-white;
+      border-right: 8px solid $color-white;
     }
   }
 

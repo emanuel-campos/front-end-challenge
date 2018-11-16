@@ -36,6 +36,24 @@ class Cars extends Component {
             dots: true,
           },
         },
+        {
+          breakpoint: 425,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 375,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+          },
+        },
       ],
     };
     return (

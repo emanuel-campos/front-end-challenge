@@ -5,6 +5,11 @@
     $font-size-base,
     $color-gray
   );
+
+  @include media-queries('tablet-small', max) {
+    max-width: 300px;
+    margin: 0 auto;
+  }
 }
 
 .callsitem-title {

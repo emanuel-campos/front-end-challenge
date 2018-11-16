@@ -5,9 +5,10 @@ import {
   Col,
 } from 'react-bootstrap';
 
-import FacebookLike from '@/app/components/presentations/FacebookLike/FacebookLike';
-import FacebookShare from '@/app/components/presentations/FacebookShare/FacebookShare';
+import FacebookLike from '@/app/presentations/FacebookLike/FacebookLike';
+import FacebookShare from '@/app/presentations/FacebookShare/FacebookShare';
 import SimulateFinancing from '../../presentations/SimulateFinancing/SimulateFinancing';
+import VideoBackground from '../../presentations/VideoBackground/VideoBackground';
 
 // mock de dados usados no container Showcase
 import {
@@ -26,19 +27,41 @@ import './Showcase.style.scss';
  */
 
 class Showcase extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showVideo: false,
+    };
+
+    this.handleResize = this.handleResize.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+  }
+
+  handleResize() {
+    this.setState({
+      showVideo: (window.innerWidth > 960),
+    });
+  }
+
   render() {
     return (
       <div className="showcase">
-        <div className="showcase-areavideo">
-          <div className="showcase-areavideo-player">
-            <iframe className="showcase-areavideo-frame" src="https://player.vimeo.com/video/125018656?background=1" title="Video" frameBorder="0" />
-          </div>
-        </div>
+        {this.state.showVideo && (
+          <VideoBackground
+            video="https://player.vimeo.com/video/125018656?background=1"
+            width="1024"
+            height="576"
+          />
+        )}
         <div className="showcase-pelicula" />
         <div className="showcase-wrapper">
           <Grid>
             <Row>
-              <Col xs={12} md={4}>
+              <Col xs={12} sm={4}>
                 <div className="showcase-simulatefinancing" id="showcase-simulatefinancing">
                   <SimulateFinancing
                     title="Simular Financiamento"
@@ -48,7 +71,7 @@ class Showcase extends Component {
                   />
                 </div>
               </Col>
-              <Col xs={12} md={8}>
+              <Col xs={12} sm={8}>
                 <div className="showcase-content">
                   <div className="showcase-header">
                     <h2 className="showcase-title">

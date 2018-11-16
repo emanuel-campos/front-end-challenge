@@ -10,7 +10,7 @@ export default [
     description: 'Always first off the line. Instant torque.',
   },
   {
-    title: 'Bonús de até',
+    title: 'Bônus de até',
     subtitle: 'R$ 3 mil',
     description: 'Always first off the line. Instant torque delivers full power in a heartbeat.',
   },

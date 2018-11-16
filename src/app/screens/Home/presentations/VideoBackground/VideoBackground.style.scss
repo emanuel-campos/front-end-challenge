@@ -1,0 +1,24 @@
+.videobackground {
+  z-index: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .8) url('~images/loading.svg') no-repeat center center;
+}
+
+.videobackground-wrapper {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.videobackground-frame {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}

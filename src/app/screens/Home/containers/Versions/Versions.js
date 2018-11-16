@@ -55,7 +55,7 @@ class Versions extends Component {
                   {MockVersions.map((version, indexVersion) => (
                     <Tab.Pane eventKey={indexVersion} key={indexVersion.toString()}>
                       <Row>
-                        <Col xs={12} md={7}>
+                        <Col xs={12} sm={7}>
 
                           {/* BEGIN foto destaque */}
                           <div className="versions-featuredphoto">
@@ -64,7 +64,7 @@ class Versions extends Component {
                           {/* END foto destaque */}
 
                         </Col>
-                        <Col xs={12} md={5}>
+                        <Col xs={12} sm={5}>
 
                           {/* BEGIN tabela com scroll */}
                           <div className="versions-scrolltable">
