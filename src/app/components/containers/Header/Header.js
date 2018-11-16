@@ -7,6 +7,7 @@ import {
   NavDropdown,
 } from 'react-bootstrap';
 import { bootstrapUtils } from 'react-bootstrap/lib/utils';
+import FontAwesome from 'react-fontawesome';
 
 // estilo Sass para o componente
 import './Header.style.scss';
@@ -70,7 +71,10 @@ class Header extends Component {
                 <img alt="Grand Motors" src={LogoGrandMotors} />
               </a>
             </Navbar.Brand>
-            <Navbar.Toggle className="header-togglemenu" />
+            <Navbar.Toggle className="header-togglemenu">
+              Menu
+              <FontAwesome className="header-togglemenu-icon" name="bars" />
+            </Navbar.Toggle>
           </Navbar.Header>
           {/* END header brand */}
 

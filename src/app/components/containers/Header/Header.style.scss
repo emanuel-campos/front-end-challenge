@@ -19,7 +19,7 @@
 
   li {
     > a {
-      padding: $padding-wee $padding-base;
+      padding: $padding-wee $padding-base !important; // important para sobrescrever estilo bootstrap
 
       @include font-text(
         $font-size-small,
@@ -63,7 +63,7 @@
         $font-weight-semi-bold,
         uppercase);
 
-      @include media-queries('tablet', max) {
+      @include media-queries('tablet-small', max) {
         padding: $padding-small;
       }
     }
@@ -97,6 +97,7 @@
   }
 }
 
+/* BEGIN topo fixo que acompanha a rolagem */
 .header-scroll {
   .header-navbar {
     background: $color-header-base;
@@ -105,18 +106,26 @@
   }
 }
 
-.header-togglemenu {
-  .icon-bar {
-    background: $color-white;
-    border-radius: 0;
-    height: 3px;
-    width: 30px;
-  }
+/* END topo fixo que acompanha a rolagem */
 
-  .icon-bar + .icon-bar {
-    margin-top: 5px;
-  }
+/* BEGIN botão de menu responsivo */
+.header-togglemenu {
+
+  @include font-text(
+    $font-size-base,
+    $color-font,
+    $font-weight-bold,
+    uppercase
+  );
 }
+
+.header-togglemenu-icon {
+  margin-left: $margin-wee;
+  font-size: 26px;
+  vertical-align: middle;
+}
+
+/* END botão de menu responsivo */
 
 .header-navbar {
   .navbar-collapse.in {

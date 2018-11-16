@@ -1,6 +1,10 @@
 .calls {
   padding: $padding-base 0;
   background: url('~images/calls/bg.jpg') repeat;
+
+  @include media-queries('tablet-small', max) {
+    padding: 0;
+  }
 }
 
 .calls-item {
@@ -18,8 +22,15 @@
     @include pseudo;
   }
 
-  @include media-queries('tablet', max) {
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+
+  @include media-queries('tablet-small', max) {
     padding: 0;
+    min-height: 100%;
 
     &:after {
       width: 100%;
@@ -29,9 +40,7 @@
     }
   }
 
-  &:last-child {
-    &:after {
-      display: none;
-    }
+  @include media-queries('tablet', max) {
+    padding: $padding-extra 0;
   }
 }

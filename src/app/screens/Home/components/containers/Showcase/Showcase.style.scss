@@ -36,7 +36,7 @@
   position: relative;
   padding-top: $margin-base;
 
-  @include media-queries('tablet', max) {
+  @include media-queries('tablet-small', max) {
     text-align: center;
     height: auto;
     padding-top: 0;
@@ -49,7 +49,7 @@
   bottom: 0;
   left: 0;
 
-  @include media-queries('tablet', max) {
+  @include media-queries('tablet-small', max) {
     position: static;
     margin-top: $margin-middle;
   }

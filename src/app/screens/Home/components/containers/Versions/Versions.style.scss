@@ -11,6 +11,10 @@
     $color-font,
     $font-weight-light
   );
+
+  @include media-queries('tablet-small', max) {
+    text-align: center;
+  }
 }
 
 .versions-featuredphoto {
@@ -49,6 +53,10 @@
 
   @include media-queries('tablet') {
     text-align: right;
+  }
+
+  @include media-queries('tablet-small', max) {
+    text-align: center;
   }
 }
 
